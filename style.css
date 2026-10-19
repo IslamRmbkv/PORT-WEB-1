@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root {
+  --bg: #f4f6f9;          
+  --accent: #1d4ed8;     
+  --muted: #64748b;       
+  --card: #0d1b2a;        
+  --soft: #e2e8f0;        
+  --text: #1e293b;       
+  --card-text: #f8fafc;   
+  --shadow: 0 10px 25px rgba(13, 27, 42, 0.08);
+  --border: #cbd5e1;     
+}
+
+* {
+  box-sizing: border-box;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Header & Navigation */
+header {
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(13, 27, 42, 0.15);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-weight: 800;
+  color: var(--card-text);
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+}
+
+.header_nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.header_nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.header_nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--card-text);
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0;
+}
+
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.intro {
+  flex: 1 1 420px;
+  min-width: 280px;
+  max-width: 760px;
+}
+
+.intro h4 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.intro h1 {
+  margin: 0 0 16px 0;
+  font-size: 3.5rem;
+  line-height: 1.1;
+  color: var(--card);
+  font-weight: 800;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 18px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(29, 78, 216, 0.3);
+}
+
+.btn:hover {
+  background: #1e40af;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.4);
+}
+
+/* Photo */
+.photo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--card);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+/* About Section */
+.about {
+  padding: 56px 0;
+}
+
+.hero-heading {
+  margin: 0 0 24px 0;
+  color: var(--card);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.about-features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.project-item {
+  background: var(--card);
+  color: var(--card-text);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  flex: 1 1 260px;
+}
+
+.project-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(13, 27, 42, 0.2);
+}
+
+.project-item h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.15rem;
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+.project-item p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.about-description {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 800px;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+  padding: 56px 0;
+  background: #eef2f6;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 32px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  flex: 1 1 360px;
+  background: var(--card);
+  color: var(--card-text);
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-card .hero-heading {
+  color: var(--card-text);
+}
+
+.contact-media {
+  margin-bottom: 16px;
+}
+
+.contact-media img {
+  width: 90px;
